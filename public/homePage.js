@@ -41,7 +41,7 @@ const moneyManager = new MoneyManager();
         moneyManager.setMessage(response.success, 'Пополнение счета успешно!');
       }
       else {
-        moneyManager.setMessage(response.success, 'Ошибка! Попробуйте еще раз!');
+        moneyManager.setMessage(response.succes, response.error);
       }
     })
   }
@@ -53,7 +53,7 @@ const moneyManager = new MoneyManager();
         moneyManager.setMessage(response.success, 'Операция прошла успешно!')
       }
       else {
-        moneyManager.setMessage(response.success, 'Ошибка! Попробуйте еще раз!')
+        moneyManager.setMessage(response.success, response.error)
       }
     })
   }
@@ -65,7 +65,7 @@ const moneyManager = new MoneyManager();
             moneyManager.setMessage(response.success, 'Перевод выполнен успешно!');
         }
         else {
-            moneyManager.setMessage(response.success, 'Ошибка! Попробуйте еще раз!');
+            moneyManager.setMessage(response.success, response.error);
         }
     });
 };
@@ -90,7 +90,7 @@ getFavorites();
             getFavorites();
         }
         else {
-            moneyManager.setMessage(response.success, 'Ошибка! Попробуйте еще раз!');
+            moneyManager.setMessage(response.success, response.error);
         }
     });
 };
@@ -101,7 +101,7 @@ getFavorites();
             getFavorites();
         }
         else {
-            moneyManager.setMessage(response.success, 'Ошибка! Попробуйте еще раз!');
+            moneyManager.setMessage(response.success, response.error);
         }
     });
 };
